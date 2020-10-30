@@ -7,7 +7,7 @@ import click
 @click.command()
 @click.argument('genus')
 @click.argument('species')
-@click.option('--endpoint', '-e')
+@click.option('--endpoint', '-e', help='Endpoint url, defaults to `https://treatment.ld.plazi.org/sparql`')
 def main(genus, species, endpoint):
     sparqlEndoint = endpoint or 'https://treatment.ld.plazi.org/sparql'
     # genus = 'Tyrannosaurus'
