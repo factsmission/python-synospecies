@@ -20,7 +20,7 @@ SELECT DISTINCT ?tc WHERE {{
       a <http://filteredpush.org/ontologies/oa/dwcFP#TaxonConcept>.
 }}'''
 
-    # print(f'Searching {sparqlEndoint} for {genus} {species}')
+    print(f'Searching {sparqlEndoint} for {genus} {species}')
     r = requests.get(sparqlEndoint,
                      params={'query': query1},
                      headers={'accept': 'application/sparql-results+json'})
